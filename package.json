@@ -1,6 +1,6 @@
 {
   "name": "print-my-html-js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "打印指定HTML代码块，且支持设置打印文件页面大小。",
   "main": "dist/print-my-html-js.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WubbaLubbaDubRick/print-html.git"
+    "url": "git+https://github.com/WubbaLubbaDubRick/print-my-html-js.git"
   },
   "keywords": [
     "print",
@@ -21,9 +21,9 @@
   "author": "WubbaLubbaDubRick",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WubbaLubbaDubRick/print-html/issues"
+    "url": "https://github.com/WubbaLubbaDubRick/print-my-html-js/issues"
   },
-  "homepage": "https://github.com/WubbaLubbaDubRick/print-html#readme",
+  "homepage": "https://github.com/WubbaLubbaDubRick/print-my-html-js#readme",
   "dependencies": {
     "html2canvas": "^1.4.1",
     "vue": "^2.7.14"

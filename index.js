@@ -24,6 +24,8 @@ async function viewIframe(binding) {
     let printWidth = dom.getAttribute('printWidth');
     // 打印高度
     let printHeight = dom.getAttribute('printHeight');
+    // 打印类型
+    const type = dom.getAttribute('type');
 
     // 之前的iframe删除  ======== Start
     const oldIframe = document.getElementById('iframe');
@@ -33,7 +35,7 @@ async function viewIframe(binding) {
     // 之前的iframe删除  ======== End
 
     // 宽高转化
-    let type2unit1 = type2unit({ printWidth, printHeight, dom });
+    let type2unit1 = type2unit({ printWidth, printHeight, dom, type });
 
     // 创建iframe  ======== Start
     const iframe = document.createElement('iframe');
@@ -51,15 +53,17 @@ async function viewIframe(binding) {
     let doc = iframe.contentDocument || iframe.contentWindow.document;
 
     // 打印时去掉页眉页脚
-    doc.write(`
-        <style media="print">@page {
-            size: ${ type2unit1.printWidth + 'mm' } ${ type2unit1.printHeight + 'mm' };
-            margin: 0;
-            padding: 0;
-            border: none;
-        }
-        </style>
-    `)
+    if (type === 'mm' || type === 'px') {
+        doc.write(`
+            <style media="print">@page {
+                size: ${ type2unit1.printWidth + 'mm' } ${ type2unit1.printHeight + 'mm' };
+                margin: 0;
+                padding: 0;
+                border: none;
+            }
+            </style>
+        `)
+    }
 
     doc.close()
 
@@ -79,12 +83,11 @@ async function viewIframe(binding) {
  * printWidth、printHeight：单位mm
  */
 function type2unit(option) {
-    const type = option.dom.getAttribute('type');
     let width = 0;
     let height = 0;
     let printWidth = 0;
     let printHeight = 0;
-    if (type === 'px') {
+    if (option.type === 'px') {
         width = option.printWidth
         height = option.printHeight
         printWidth = Math.floor(new UnitConversion().pxConversionMm(option.printWidth))
