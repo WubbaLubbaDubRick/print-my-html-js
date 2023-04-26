@@ -1,0 +1,38 @@
+{
+  "name": "print-my-html-js",
+  "version": "1.0.2",
+  "description": "打印指定HTML代码块，且支持设置打印文件页面大小。",
+  "main": "dist/print-my-html-js.js",
+  "scripts": {
+    "test": "NODE_ENV=development rollup -w -c rollup.config.js",
+    "build:dev": "NODE_ENV=development rollup -c rollup.config.js",
+    "build:pro": "NODE_ENV=production rollup -c rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WubbaLubbaDubRick/print-html.git"
+  },
+  "keywords": [
+    "print",
+    "vue",
+    "print html",
+    "print qrcode"
+  ],
+  "author": "WubbaLubbaDubRick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WubbaLubbaDubRick/print-html/issues"
+  },
+  "homepage": "https://github.com/WubbaLubbaDubRick/print-html#readme",
+  "dependencies": {
+    "html2canvas": "^1.4.1",
+    "vue": "^2.7.14"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.1.1",
+    "rollup": "^2.61.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-vue": "^5.1.9",
+    "vue-template-compiler": "^2.7.14"
+  }
+}
