@@ -2,6 +2,8 @@ node_modules
 dist
 *.log
 tests
+.idea/
+.idea/*
 .git
 .gitignore
 .npmignore
