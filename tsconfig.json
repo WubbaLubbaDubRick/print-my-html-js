@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "ES2020",
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "declaration": true,
+    "moduleResolution": "node"
+  },
+  "include": ["src/**/*", "global.d.ts"],
+  "exclude": ["node_modules"]
+}
