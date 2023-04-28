@@ -13,7 +13,7 @@ export default {
             file: 'dist/print-my-html-js.js',
             format: 'umd',
             name: 'PrintMyHtmlJs',
-            sourcemap: true
+            sourcemap: false
         },
         // {
         //     file: 'dist/print-my-html-js.esm.js',
