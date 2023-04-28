@@ -68,14 +68,14 @@ async function viewIframe(binding: DirectiveBinding) {
     // 打印时去掉页眉页脚
     if (type === 'mm' || type === 'px') {
         doc.write(`
-        <style media="print">@page {
-            size: ${ type2unit1.printWidth + 'mm' } ${ type2unit1.printHeight + 'mm' };
-            margin: 0;
-            padding: 0;
-            border: none;
-        }
-        </style>
-    `)
+            <style media="print">@page {
+                size: ${ type2unit1.printWidth + 'mm' } ${ type2unit1.printHeight + 'mm' };
+                margin: 0;
+                padding: 0;
+                border: none;
+            }
+            </style>
+        `)
     }
 
     doc.close();
@@ -113,27 +113,24 @@ function type2unit(option: Type2UnitOptions) {
     } else {
         Type2unit1.width = Math.floor(new UnitConversion().mmConversionPx(option.printWidth))
         Type2unit1.height = Math.floor(new UnitConversion().mmConversionPx(option.printHeight))
-        Type2unit1.width = option.printWidth
-        Type2unit1.height = option.printHeight
+        Type2unit1.printWidth = option.printWidth
+        Type2unit1.printHeight = option.printHeight
     }
-    return {
-        ...Type2unit1
-    }
+    return Type2unit1
 }
 
 
 // HTML转Canvas
 async function viewHtml(ViewHtml: ViewHtml) {
-    // doc, type2unit1, binding
-    const targetDom: HTMLElement | null = document.getElementById(ViewHtml.binding.value);
+    const nullDom: HTMLElement = document.createElement('div');
+    nullDom.innerText = '无数据';
+    const targetDom: HTMLElement = document.getElementById(ViewHtml.binding.value) || nullDom;
 
-    let tableCanvas: HTMLCanvasElement = new HTMLCanvasElement();
+    let tableCanvas: HTMLCanvasElement = document.createElement('canvas');
     try {
-        if (targetDom) {
-            tableCanvas = await html2canvas(targetDom, {
-                scale: 6
-            });
-        }
+        tableCanvas = await html2canvas(targetDom, {
+            scale: 6
+        });
     } catch (error) {
         console.log(error, 'error');
     }
