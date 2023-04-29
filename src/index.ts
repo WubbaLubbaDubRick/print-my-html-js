@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import { VueConstructor } from 'vue/types/vue';
-import { iframePrint } from './utils/viewIframe';
+import { iframePrint } from './js/viewIframe';
 
 const install = (Vue: VueConstructor) => {
     Vue.directive('print-html', {

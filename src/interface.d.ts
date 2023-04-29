@@ -15,17 +15,19 @@ export interface Type2unit1 {
 export interface ViewHtml {
     doc: Document;
     binding: DirectiveBinding;
-    type2unit1: Type2unit1;
-    type: string | undefined
-    printScale?: number | undefined;
+    attributeResult: getAttributeType;
 }
 
 export interface getAttributeType {
-    type: string;
+    type?: string;
     justifyContent?: string;
     alignItems?: string;
-    printScale?: number;
+    width?: number;
+    height?: number;
+    isPaved?: string;
+    printWidth?: number;
+    printHeight?: number;
+    printBackground?: string;
+    printScale?: string;
     error?: string;
 }
-
-export type getAttributeResult = getAttributeType | { error: string };

@@ -25,6 +25,9 @@ Vue.use(printMyHtmlJs)
   * 297（默认：被打印Dom 高度）
 * #### _打印清晰度：printScale {String}_  (printScale必须大于0)
   * 1（默认）
+* #### _是否铺满：isPaved {String}_  (type="custom"时有效)
+  * default（不铺满）（默认）
+  * paved（铺满）
 ```
 <div id="print" type="custom" printWidth="60" printHeight="40">
   <div class="font-size: 20px;" style="color: red;">
