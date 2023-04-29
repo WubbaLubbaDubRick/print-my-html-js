@@ -23,7 +23,7 @@ Vue.use(printMyHtmlJs)
   * 210（默认：被打印Dom 宽度）
 * #### _打印高度：printHeight {String}_  (type="custom"时有效)
   * 297（默认：被打印Dom 高度）
-* #### _打印清晰度：printScale {String}_
+* #### _打印清晰度：printScale {String}_  (printScale必须大于0)
   * 1（默认）
 ```
 <div id="print" type="custom" printWidth="60" printHeight="40">

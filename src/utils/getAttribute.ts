@@ -44,7 +44,7 @@ export function getAttribute(dom: HTMLElement): getAttributeResult {
     // 打印清晰度
     let printScale: number = parseInt(dom.getAttribute('printScale') || '1');
     if (isNaN(printScale) || printScale <= 0) {
-        return { error: "printScale：未定义的printScale数值" };
+        return { error: "printScale：未定义的printScale数值（大于0且只能是数字）" };
     }
 
     return {
