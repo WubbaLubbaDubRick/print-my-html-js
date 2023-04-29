@@ -22,10 +22,8 @@ export async function viewHtml(ViewHtml: ViewHtml) {
 
     if (ViewHtml.attributeResult.type === 'custom') {
         if (ViewHtml.attributeResult.isPaved === 'paved') {
-            tableCanvas.style.width = ViewHtml.attributeResult.printWidth + 'mm';
-            // mm 打印 height有1px误差
-            const num: number = ViewHtml.attributeResult.printHeight || 297;
-            tableCanvas.style.height = num - 0.5 + 'mm';
+            tableCanvas.style.width = '100%';
+            tableCanvas.style.height = '100%';
         } else {
             tableCanvas.style.width = ViewHtml.attributeResult.width + 'px';
             // mm 打印 height有1px误差
