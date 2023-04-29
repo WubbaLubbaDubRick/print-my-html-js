@@ -1,21 +1,31 @@
 import {DirectiveBinding} from "vue/types/options";
 
-interface Type2UnitOptions {
-    printWidth: number;
-    printHeight: number;
+export interface Type2UnitOptions {
     dom: HTMLElement;
     type: string;
 }
 
-interface Type2unit1 {
+export interface Type2unit1 {
     width: number,
     height: number,
     printWidth: number,
     printHeight: number,
 }
 
-interface ViewHtml {
-    doc: any,
-    type2unit1: Type2unit1,
-    binding: DirectiveBinding
+export interface ViewHtml {
+    doc: Document;
+    binding: DirectiveBinding;
+    type2unit1: Type2unit1;
+    type: string | undefined
+    printScale?: number | undefined;
 }
+
+export interface getAttributeType {
+    type: string;
+    justifyContent?: string;
+    alignItems?: string;
+    printScale?: number;
+    error?: string;
+}
+
+export type getAttributeResult = getAttributeType | { error: string };

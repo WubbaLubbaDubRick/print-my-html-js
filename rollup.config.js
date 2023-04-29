@@ -13,7 +13,10 @@ export default {
             file: 'dist/print-my-html-js.js',
             format: 'umd',
             name: 'PrintMyHtmlJs',
-            sourcemap: false
+            sourcemap: false,
+            globals: {
+                vue: 'Vue', // 这里指定 Vue 对应的全局变量名
+            },
         },
         // {
         //     file: 'dist/print-my-html-js.esm.js',
