@@ -20,9 +20,9 @@ Vue.use(printMyHtmlJs)
   * center：纵向居中
   * end：下偏移
 * #### _打印宽度：printWidth {String}_  (type="custom"时有效)
-  * 210（默认：被打印Dom 宽度）
+  * 210（默认：被打印Dom 宽度；单位：mm）
 * #### _打印高度：printHeight {String}_  (type="custom"时有效)
-  * 297（默认：被打印Dom 高度）
+  * 297（默认：被打印Dom 高度；单位：mm）
 * #### _打印清晰度：printScale {String}_  (printScale必须大于0)
   * 1（默认）
 * #### _是否铺满：isPaved {String}_  (type="custom"时有效)
