@@ -11,7 +11,7 @@ export function getAttribute(dom: HTMLElement): getAttributeType {
     // 对齐属性范围
     let alignList: string[] = ['start', 'center', 'end'];
     // 铺满属性范围
-    let pavedList: string[] = ['paved', 'default'];
+    let pavedList: string[] = ['paved', 'halfPaved', 'default'];
 
     // 打印类型
     const type: string = dom.getAttribute('type') || 'default';

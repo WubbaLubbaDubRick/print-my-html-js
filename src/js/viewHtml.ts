@@ -24,6 +24,9 @@ export async function viewHtml(ViewHtml: ViewHtml) {
         if (ViewHtml.attributeResult.isPaved === 'paved') {
             tableCanvas.style.width = '100%';
             tableCanvas.style.height = '100%';
+        } else if (ViewHtml.attributeResult.isPaved === 'halfPaved') {
+            tableCanvas.style.width = '100%';
+            tableCanvas.style.height = '50%';
         } else {
             tableCanvas.style.width = ViewHtml.attributeResult.width + 'px';
             // mm 打印 height有1px误差
