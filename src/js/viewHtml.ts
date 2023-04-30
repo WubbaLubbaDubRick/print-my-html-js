@@ -32,6 +32,14 @@ export async function viewHtml(ViewHtml: ViewHtml) {
             // mm 打印 height有1px误差
             tableCanvas.style.height = ViewHtml.attributeResult.height + 'px';
         }
+    } else {
+        if (ViewHtml.attributeResult.isPaved === 'paved') {
+            tableCanvas.style.width = '100%';
+            tableCanvas.style.height = '100%';
+        } else if (ViewHtml.attributeResult.isPaved === 'halfPaved') {
+            tableCanvas.style.width = '100%';
+            tableCanvas.style.height = '50%';
+        }
     }
 
     ViewHtml.doc.body.appendChild(tableCanvas);

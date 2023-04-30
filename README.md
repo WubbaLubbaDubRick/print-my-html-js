@@ -25,7 +25,7 @@ Vue.use(printMyHtmlJs)
   * 297（默认：被打印Dom 高度；单位：mm）
 * #### _打印清晰度：printScale {String}_  (printScale必须大于0)
   * 1（默认）
-* #### _是否铺满：isPaved {String}_  (type="custom"时有效)
+* #### _是否铺满：isPaved {String}_
   * default（不铺满）（默认）
   * halfPaved（半页铺满）
   * paved（铺满）
