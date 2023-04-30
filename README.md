@@ -27,6 +27,7 @@ Vue.use(printMyHtmlJs)
   * 1（默认）
 * #### _是否铺满：isPaved {String}_  (type="custom"时有效)
   * default（不铺满）（默认）
+  * halfPaved（半页铺满）
   * paved（铺满）
 ```
 <div id="print" type="custom" printWidth="60" printHeight="40">
